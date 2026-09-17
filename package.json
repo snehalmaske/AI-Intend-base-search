@@ -1,0 +1,23 @@
+{
+  "name": "ai-intent-based-search",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Women's clothing e-commerce storefront with an AI-powered intent-based product discovery agent",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently -n server,client -c blue,magenta \"npm run dev --workspace=server\" \"npm run dev --workspace=client\"",
+    "dev:server": "npm run dev --workspace=server",
+    "dev:client": "npm run dev --workspace=client",
+    "generate-images": "node scripts/generate-product-images.js",
+    "build": "npm run build --workspace=client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}

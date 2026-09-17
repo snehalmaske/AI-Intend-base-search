@@ -1,0 +1,602 @@
+[
+  {
+    "id": "P001",
+    "name": "Wrap Midi Dress",
+    "category": "Dresses",
+    "subcategory": "Midi",
+    "price": 78,
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": ["Terracotta", "Navy", "Black"],
+    "material": "Rayon blend",
+    "tags": {
+      "occasion": ["wedding guest", "brunch", "date night", "beach wedding"],
+      "style": ["romantic", "feminine", "flowy"],
+      "season": ["spring", "summer"],
+      "fit": ["true to size", "relaxed"],
+      "colorMood": ["warm", "earthy"]
+    },
+    "shortDescription": "A flattering wrap-front midi dress with a soft flowy skirt.",
+    "longDescription": "This wrap midi dress is designed to move with you, featuring an adjustable tie waist, flutter sleeves, and a soft rayon blend that drapes beautifully. Perfect for warm-weather occasions like beach weddings, garden parties, or a relaxed dinner date.",
+    "image": "/images/products/p001-wrap-midi-dress.jpg"
+  },
+  {
+    "id": "P002",
+    "name": "Tailored Blazer Dress",
+    "category": "Dresses",
+    "subcategory": "Mini",
+    "price": 95,
+    "sizes": ["XS", "S", "M", "L"],
+    "colors": ["Black", "Charcoal"],
+    "material": "Ponte knit",
+    "tags": {
+      "occasion": ["office", "business casual", "after-work drinks"],
+      "style": ["structured", "sleek", "minimalist"],
+      "season": ["fall", "winter", "spring"],
+      "fit": ["fitted", "true to size"],
+      "colorMood": ["neutral", "cool"]
+    },
+    "shortDescription": "A blazer-inspired mini dress with sharp tailoring.",
+    "longDescription": "Part blazer, part dress — this piece has structured shoulders, a notch collar, and a nipped waist for a polished silhouette. Works as a stylish stand-in for a suit at the office or dressed up with heels for evening.",
+    "image": "/images/products/p002-blazer-dress.jpg"
+  },
+  {
+    "id": "P003",
+    "name": "Linen Sundress",
+    "category": "Dresses",
+    "subcategory": "Maxi",
+    "price": 68,
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": ["White", "Sky Blue", "Sand"],
+    "material": "100% linen",
+    "tags": {
+      "occasion": ["vacation", "beach wedding", "casual daytime"],
+      "style": ["breezy", "effortless", "boho"],
+      "season": ["summer"],
+      "fit": ["relaxed", "oversized"],
+      "colorMood": ["light", "airy"]
+    },
+    "shortDescription": "A breathable linen maxi dress for hot days and travel.",
+    "longDescription": "Cut from breathable linen, this maxi dress has a smocked back bodice and adjustable straps for all-day comfort. An easy pick for beach vacations, warm-weather weddings, or wandering a new city.",
+    "image": "/images/products/p003-linen-sundress.jpg"
+  },
+  {
+    "id": "P004",
+    "name": "Velvet Slip Dress",
+    "category": "Dresses",
+    "subcategory": "Mini",
+    "price": 89,
+    "sizes": ["XS", "S", "M", "L"],
+    "colors": ["Emerald", "Burgundy", "Black"],
+    "material": "Velvet",
+    "tags": {
+      "occasion": ["party", "holiday party", "date night", "cocktail"],
+      "style": ["glam", "sultry", "elevated"],
+      "season": ["fall", "winter"],
+      "fit": ["fitted", "true to size"],
+      "colorMood": ["rich", "jewel-toned"]
+    },
+    "shortDescription": "A luxe velvet slip dress for evening occasions.",
+    "longDescription": "Cut on the bias for a subtle body-skimming fit, this velvet slip dress catches the light beautifully. Ideal for holiday parties, cocktail events, or any night that calls for a bit of shine.",
+    "image": "/images/products/p004-velvet-slip-dress.jpg"
+  },
+  {
+    "id": "P005",
+    "name": "Floral Wrap Mini Dress",
+    "category": "Dresses",
+    "subcategory": "Mini",
+    "price": 62,
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": ["Floral Print"],
+    "material": "Cotton poplin",
+    "tags": {
+      "occasion": ["brunch", "garden party", "casual daytime", "bridal shower"],
+      "style": ["romantic", "playful", "feminine"],
+      "season": ["spring", "summer"],
+      "fit": ["true to size"],
+      "colorMood": ["bright", "warm"]
+    },
+    "shortDescription": "A cheerful floral mini with a flattering wrap silhouette.",
+    "longDescription": "This lightweight cotton poplin dress features an all-over floral print, a wrap tie waist, and short puff sleeves. A go-to for daytime events like brunches, bridal showers, or garden parties.",
+    "image": "/images/products/p005-floral-wrap-mini.jpg"
+  },
+  {
+    "id": "P006",
+    "name": "Knit Sweater Dress",
+    "category": "Dresses",
+    "subcategory": "Midi",
+    "price": 84,
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": ["Camel", "Grey", "Cream"],
+    "material": "Wool blend knit",
+    "tags": {
+      "occasion": ["office", "casual daytime", "winter holidays"],
+      "style": ["cozy", "minimalist", "classic"],
+      "season": ["fall", "winter"],
+      "fit": ["fitted", "true to size"],
+      "colorMood": ["neutral", "warm"]
+    },
+    "shortDescription": "A cozy ribbed knit dress that works from desk to dinner.",
+    "longDescription": "Soft ribbed knit hugs the body in all the right places while staying warm enough for cold offices and chilly evenings. Pair with boots and a coat for an easy winter uniform.",
+    "image": "/images/products/p006-knit-sweater-dress.jpg"
+  },
+  {
+    "id": "P007",
+    "name": "Satin Slip Maxi Dress",
+    "category": "Dresses",
+    "subcategory": "Maxi",
+    "price": 98,
+    "sizes": ["XS", "S", "M", "L"],
+    "colors": ["Champagne", "Black", "Dusty Rose"],
+    "material": "Satin",
+    "tags": {
+      "occasion": ["wedding guest", "cocktail", "formal", "date night"],
+      "style": ["elegant", "sultry", "minimalist"],
+      "season": ["spring", "summer", "fall"],
+      "fit": ["fitted", "bias cut"],
+      "colorMood": ["soft", "luxe"]
+    },
+    "shortDescription": "A liquid-drape satin maxi for formal occasions.",
+    "longDescription": "Cut in a bias-cut silhouette that skims the body, this satin maxi dress has a cowl neckline and adjustable straps. A dependable choice for wedding guest duty or any formal invitation.",
+    "image": "/images/products/p007-satin-slip-maxi.jpg"
+  },
+  {
+    "id": "P008",
+    "name": "Denim Shirt Dress",
+    "category": "Dresses",
+    "subcategory": "Midi",
+    "price": 72,
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": ["Medium Wash Denim"],
+    "material": "Cotton denim",
+    "tags": {
+      "occasion": ["casual daytime", "weekend", "travel"],
+      "style": ["classic", "utilitarian", "effortless"],
+      "season": ["spring", "fall"],
+      "fit": ["true to size", "belted"],
+      "colorMood": ["neutral"]
+    },
+    "shortDescription": "A button-front denim dress with a belted waist.",
+    "longDescription": "A wardrobe staple with a full button placket, chest pockets, and a self-tie belt to define the waist. Wear open over a tee and jeans or buttoned up on its own for easy weekend style.",
+    "image": "/images/products/p008-denim-shirt-dress.jpg"
+  },
+  {
+    "id": "P009",
+    "name": "Silk Cami Top",
+    "category": "Tops",
+    "subcategory": "Camisole",
+    "price": 48,
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": ["Ivory", "Black", "Blush"],
+    "material": "100% silk",
+    "tags": {
+      "occasion": ["office", "date night", "layering"],
+      "style": ["minimalist", "elegant", "versatile"],
+      "season": ["all season"],
+      "fit": ["true to size", "relaxed"],
+      "colorMood": ["soft", "neutral"]
+    },
+    "shortDescription": "A silky camisole that layers under blazers or stands alone.",
+    "longDescription": "This adjustable-strap silk cami is cut with a slight relaxed fit for easy layering under blazers, cardigans, or worn alone tucked into tailored trousers.",
+    "image": "/images/products/p009-silk-cami-top.jpg"
+  },
+  {
+    "id": "P010",
+    "name": "Oversized Poplin Shirt",
+    "category": "Tops",
+    "subcategory": "Button-down",
+    "price": 58,
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": ["White", "Light Blue", "Black Stripe"],
+    "material": "Cotton poplin",
+    "tags": {
+      "occasion": ["office", "casual daytime", "travel"],
+      "style": ["classic", "oversized", "effortless"],
+      "season": ["all season"],
+      "fit": ["oversized", "relaxed"],
+      "colorMood": ["neutral"]
+    },
+    "shortDescription": "A crisp oversized button-down for effortless layering.",
+    "longDescription": "An oversized fit through the body and sleeves gives this poplin shirt a relaxed, borrowed-from-the-boyfriend feel. Wear tucked, knotted, or open over a tank.",
+    "image": "/images/products/p010-oversized-poplin-shirt.jpg"
+  },
+  {
+    "id": "P011",
+    "name": "Ribbed Turtleneck",
+    "category": "Tops",
+    "subcategory": "Knit top",
+    "price": 42,
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": ["Black", "Cream", "Olive"],
+    "material": "Cotton-modal blend",
+    "tags": {
+      "occasion": ["office", "casual daytime", "winter"],
+      "style": ["minimalist", "classic", "layering"],
+      "season": ["fall", "winter"],
+      "fit": ["fitted", "true to size"],
+      "colorMood": ["neutral", "warm"]
+    },
+    "shortDescription": "A fitted ribbed turtleneck for cold-weather layering.",
+    "longDescription": "Soft ribbed knit with a touch of stretch, this turtleneck is warm enough to wear alone under a blazer and thin enough to layer under sweaters or coats without bulk.",
+    "image": "/images/products/p011-ribbed-turtleneck.jpg"
+  },
+  {
+    "id": "P012",
+    "name": "Puff Sleeve Blouse",
+    "category": "Tops",
+    "subcategory": "Blouse",
+    "price": 62,
+    "sizes": ["XS", "S", "M", "L"],
+    "colors": ["White", "Sage Green"],
+    "material": "Cotton voile",
+    "tags": {
+      "occasion": ["office", "brunch", "date night"],
+      "style": ["romantic", "feminine", "statement sleeves"],
+      "season": ["spring", "summer"],
+      "fit": ["true to size"],
+      "colorMood": ["soft", "light"]
+    },
+    "shortDescription": "A blouse with dramatic puff sleeves and a fitted cuff.",
+    "longDescription": "Voluminous puff sleeves taper to a fitted cuff on this lightweight voile blouse, adding a feminine statement to office looks or daytime outings.",
+    "image": "/images/products/p012-puff-sleeve-blouse.jpg"
+  },
+  {
+    "id": "P013",
+    "name": "Cropped Rib Tank",
+    "category": "Tops",
+    "subcategory": "Tank",
+    "price": 32,
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": ["White", "Black", "Heather Grey"],
+    "material": "Cotton rib knit",
+    "tags": {
+      "occasion": ["casual daytime", "weekend", "gym-to-street"],
+      "style": ["basic", "layering", "sporty-chic"],
+      "season": ["spring", "summer"],
+      "fit": ["cropped", "fitted"],
+      "colorMood": ["neutral"]
+    },
+    "shortDescription": "A cropped ribbed tank for everyday layering.",
+    "longDescription": "A simple, well-fitted cropped tank in stretchy ribbed cotton — pairs easily with high-waisted jeans, skirts, or under an open shirt.",
+    "image": "/images/products/p013-cropped-rib-tank.jpg"
+  },
+  {
+    "id": "P014",
+    "name": "Merino Wool Sweater",
+    "category": "Tops",
+    "subcategory": "Sweater",
+    "price": 88,
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": ["Camel", "Forest Green", "Charcoal"],
+    "material": "Merino wool",
+    "tags": {
+      "occasion": ["office", "casual daytime", "winter"],
+      "style": ["classic", "cozy", "minimalist"],
+      "season": ["fall", "winter"],
+      "fit": ["true to size"],
+      "colorMood": ["warm", "neutral"]
+    },
+    "shortDescription": "A crewneck merino wool sweater for warmth without bulk.",
+    "longDescription": "Fine-gauge merino wool keeps you warm without adding bulk, making this crewneck sweater easy to layer under coats or wear on its own with tailored trousers.",
+    "image": "/images/products/p014-merino-wool-sweater.jpg"
+  },
+  {
+    "id": "P015",
+    "name": "Linen Button-Up Shirt",
+    "category": "Tops",
+    "subcategory": "Button-down",
+    "price": 64,
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": ["White", "Sand", "Sky Blue"],
+    "material": "100% linen",
+    "tags": {
+      "occasion": ["vacation", "casual daytime", "beach wedding"],
+      "style": ["breezy", "effortless", "classic"],
+      "season": ["summer"],
+      "fit": ["relaxed"],
+      "colorMood": ["light", "airy"]
+    },
+    "shortDescription": "A breathable linen shirt for warm-weather wear.",
+    "longDescription": "Lightweight linen with a relaxed fit makes this button-up ideal for hot climates — wear open over a swimsuit, tucked into shorts, or tied at the waist.",
+    "image": "/images/products/p015-linen-button-up.jpg"
+  },
+  {
+    "id": "P016",
+    "name": "High-Waisted Wide Leg Trousers",
+    "category": "Bottoms",
+    "subcategory": "Trousers",
+    "price": 76,
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": ["Black", "Camel", "Navy"],
+    "material": "Crepe",
+    "tags": {
+      "occasion": ["office", "business casual", "date night"],
+      "style": ["tailored", "elegant", "classic"],
+      "season": ["all season"],
+      "fit": ["high-waisted", "wide leg"],
+      "colorMood": ["neutral"]
+    },
+    "shortDescription": "Fluid wide-leg trousers with a high-waisted fit.",
+    "longDescription": "Cut from a fluid crepe with a crisp center crease, these wide-leg trousers sit high on the waist and skim over the hips for a polished, elongating silhouette suited to the office or evenings out.",
+    "image": "/images/products/p016-wide-leg-trousers.jpg"
+  },
+  {
+    "id": "P017",
+    "name": "Straight Leg Jeans",
+    "category": "Bottoms",
+    "subcategory": "Jeans",
+    "price": 68,
+    "sizes": ["24", "25", "26", "27", "28", "29", "30", "31", "32"],
+    "colors": ["Medium Wash", "Black", "Light Wash"],
+    "material": "Cotton denim with stretch",
+    "tags": {
+      "occasion": ["casual daytime", "weekend", "travel"],
+      "style": ["classic", "everyday"],
+      "season": ["all season"],
+      "fit": ["straight leg", "high-waisted"],
+      "colorMood": ["neutral"]
+    },
+    "shortDescription": "A classic straight-leg jean with a hint of stretch.",
+    "longDescription": "A dependable everyday jean with a high rise and straight leg that works with sneakers, boots, or heels alike. Just enough stretch for all-day comfort.",
+    "image": "/images/products/p017-straight-leg-jeans.jpg"
+  },
+  {
+    "id": "P018",
+    "name": "Pleated Midi Skirt",
+    "category": "Bottoms",
+    "subcategory": "Skirt",
+    "price": 58,
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": ["Black", "Champagne", "Burgundy"],
+    "material": "Satin-finish polyester",
+    "tags": {
+      "occasion": ["office", "date night", "holiday party"],
+      "style": ["elegant", "romantic", "feminine"],
+      "season": ["fall", "winter", "spring"],
+      "fit": ["high-waisted", "flowy"],
+      "colorMood": ["soft", "rich"]
+    },
+    "shortDescription": "A fluid pleated midi skirt with movement.",
+    "longDescription": "Fine accordion pleats catch the light and add movement to this midi skirt, which sits at the natural waist. Dress it up with heels or wear casually with a tee and sneakers.",
+    "image": "/images/products/p018-pleated-midi-skirt.jpg"
+  },
+  {
+    "id": "P019",
+    "name": "Tailored Shorts",
+    "category": "Bottoms",
+    "subcategory": "Shorts",
+    "price": 54,
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": ["Khaki", "Black", "White"],
+    "material": "Cotton twill",
+    "tags": {
+      "occasion": ["office", "casual daytime", "vacation"],
+      "style": ["tailored", "classic"],
+      "season": ["spring", "summer"],
+      "fit": ["high-waisted", "straight"],
+      "colorMood": ["neutral"]
+    },
+    "shortDescription": "Crisp tailored shorts with a menswear-inspired cut.",
+    "longDescription": "These tailored shorts feature a flat front, belt loops, and a mid-thigh length that reads polished rather than casual. Great for warm-weather office days or travel.",
+    "image": "/images/products/p019-tailored-shorts.jpg"
+  },
+  {
+    "id": "P020",
+    "name": "Faux Leather Leggings",
+    "category": "Bottoms",
+    "subcategory": "Leggings",
+    "price": 62,
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": ["Black"],
+    "material": "Faux leather with stretch",
+    "tags": {
+      "occasion": ["date night", "party", "night out"],
+      "style": ["edgy", "sleek", "statement"],
+      "season": ["fall", "winter"],
+      "fit": ["fitted", "high-waisted"],
+      "colorMood": ["dark", "bold"]
+    },
+    "shortDescription": "Sleek faux leather leggings with a stretch fit.",
+    "longDescription": "A stretch faux leather fabric gives these high-waisted leggings a second-skin fit with the edge of leather and the comfort of a legging. Pair with an oversized sweater for balance.",
+    "image": "/images/products/p020-faux-leather-leggings.jpg"
+  },
+  {
+    "id": "P021",
+    "name": "A-Line Denim Skirt",
+    "category": "Bottoms",
+    "subcategory": "Skirt",
+    "price": 56,
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": ["Medium Wash Denim"],
+    "material": "Cotton denim",
+    "tags": {
+      "occasion": ["casual daytime", "weekend"],
+      "style": ["classic", "effortless"],
+      "season": ["spring", "summer", "fall"],
+      "fit": ["high-waisted", "a-line"],
+      "colorMood": ["neutral"]
+    },
+    "shortDescription": "A knee-length A-line denim skirt.",
+    "longDescription": "A classic five-pocket denim skirt with an A-line cut that skims the hips and falls to the knee. An easy building block for casual daytime outfits.",
+    "image": "/images/products/p021-aline-denim-skirt.jpg"
+  },
+  {
+    "id": "P022",
+    "name": "Wool Blend Overcoat",
+    "category": "Outerwear",
+    "subcategory": "Coat",
+    "price": 168,
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": ["Camel", "Black", "Grey"],
+    "material": "Wool blend",
+    "tags": {
+      "occasion": ["office", "winter holidays", "formal"],
+      "style": ["classic", "elegant", "tailored"],
+      "season": ["fall", "winter"],
+      "fit": ["true to size", "longline"],
+      "colorMood": ["neutral", "warm"]
+    },
+    "shortDescription": "A longline wool-blend overcoat for cold weather.",
+    "longDescription": "This double-breasted overcoat is cut from a warm wool blend with a longline silhouette that layers over blazers, sweaters, and dresses alike. A cold-weather essential built to last.",
+    "image": "/images/products/p022-wool-overcoat.jpg"
+  },
+  {
+    "id": "P023",
+    "name": "Cropped Denim Jacket",
+    "category": "Outerwear",
+    "subcategory": "Jacket",
+    "price": 74,
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": ["Light Wash", "Black"],
+    "material": "Cotton denim",
+    "tags": {
+      "occasion": ["casual daytime", "weekend", "travel"],
+      "style": ["classic", "effortless"],
+      "season": ["spring", "fall"],
+      "fit": ["cropped", "true to size"],
+      "colorMood": ["neutral"]
+    },
+    "shortDescription": "A cropped denim jacket that layers over anything.",
+    "longDescription": "A cropped length keeps this denim jacket from bulking up your silhouette — perfect thrown over dresses, tanks, or tees for cool evenings.",
+    "image": "/images/products/p023-cropped-denim-jacket.jpg"
+  },
+  {
+    "id": "P024",
+    "name": "Quilted Puffer Jacket",
+    "category": "Outerwear",
+    "subcategory": "Puffer",
+    "price": 118,
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": ["Black", "Olive", "Cream"],
+    "material": "Recycled polyester fill",
+    "tags": {
+      "occasion": ["casual daytime", "travel", "winter"],
+      "style": ["sporty", "functional", "cozy"],
+      "season": ["winter"],
+      "fit": ["true to size", "relaxed"],
+      "colorMood": ["neutral"]
+    },
+    "shortDescription": "A lightweight but warm quilted puffer jacket.",
+    "longDescription": "Filled with recycled insulation, this puffer jacket is warm without being bulky, with a stand collar and zip pockets. Built for cold commutes and winter travel.",
+    "image": "/images/products/p024-quilted-puffer-jacket.jpg"
+  },
+  {
+    "id": "P025",
+    "name": "Trench Coat",
+    "category": "Outerwear",
+    "subcategory": "Trench",
+    "price": 142,
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": ["Beige", "Black"],
+    "material": "Cotton gabardine",
+    "tags": {
+      "occasion": ["office", "casual daytime", "rainy days"],
+      "style": ["classic", "timeless", "tailored"],
+      "season": ["spring", "fall"],
+      "fit": ["true to size", "belted"],
+      "colorMood": ["neutral"]
+    },
+    "shortDescription": "A timeless belted trench coat.",
+    "longDescription": "A double-breasted trench with a storm flap, belted waist, and water-resistant cotton gabardine — a classic layer for transitional weather and rainy commutes.",
+    "image": "/images/products/p025-trench-coat.jpg"
+  },
+  {
+    "id": "P026",
+    "name": "Oversized Cardigan",
+    "category": "Outerwear",
+    "subcategory": "Cardigan",
+    "price": 68,
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": ["Oatmeal", "Black", "Chocolate Brown"],
+    "material": "Cotton-wool blend knit",
+    "tags": {
+      "occasion": ["casual daytime", "office", "weekend"],
+      "style": ["cozy", "effortless", "layering"],
+      "season": ["fall", "winter"],
+      "fit": ["oversized"],
+      "colorMood": ["neutral", "warm"]
+    },
+    "shortDescription": "A slouchy oversized cardigan for easy layering.",
+    "longDescription": "A relaxed, oversized fit and dropped shoulders make this cardigan easy to throw over dresses, tanks, or button-downs. Deep patch pockets and a long length add to the cozy factor.",
+    "image": "/images/products/p026-oversized-cardigan.jpg"
+  },
+  {
+    "id": "P027",
+    "name": "Faux Fur Collar Vest",
+    "category": "Outerwear",
+    "subcategory": "Vest",
+    "price": 98,
+    "sizes": ["XS", "S", "M", "L"],
+    "colors": ["Black", "Camel"],
+    "material": "Faux fur / quilted poly fill",
+    "tags": {
+      "occasion": ["holiday party", "night out", "winter"],
+      "style": ["glam", "statement", "cozy"],
+      "season": ["winter"],
+      "fit": ["true to size"],
+      "colorMood": ["rich", "warm"]
+    },
+    "shortDescription": "A quilted vest with a plush faux fur collar.",
+    "longDescription": "This quilted vest brings a touch of glamour to cold-weather dressing with its plush faux fur collar, worn easily over sweaters or dresses for holiday gatherings.",
+    "image": "/images/products/p027-faux-fur-vest.jpg"
+  },
+  {
+    "id": "P028",
+    "name": "Woven Leather Tote Bag",
+    "category": "Accessories",
+    "subcategory": "Bag",
+    "price": 88,
+    "sizes": ["One Size"],
+    "colors": ["Tan", "Black"],
+    "material": "Genuine leather, woven",
+    "tags": {
+      "occasion": ["office", "casual daytime", "travel"],
+      "style": ["classic", "structured"],
+      "season": ["all season"],
+      "fit": ["one size"],
+      "colorMood": ["neutral", "warm"]
+    },
+    "shortDescription": "A woven leather tote with room for daily essentials.",
+    "longDescription": "Hand-woven leather panels give this tote texture and durability, with an interior zip pocket and a structured base that keeps its shape whether you're commuting or traveling.",
+    "image": "/images/products/p028-woven-leather-tote.jpg"
+  },
+  {
+    "id": "P029",
+    "name": "Silk Scarf",
+    "category": "Accessories",
+    "subcategory": "Scarf",
+    "price": 38,
+    "sizes": ["One Size"],
+    "colors": ["Floral Print", "Abstract Print"],
+    "material": "100% silk",
+    "tags": {
+      "occasion": ["office", "date night", "gifting"],
+      "style": ["elegant", "classic"],
+      "season": ["all season"],
+      "fit": ["one size"],
+      "colorMood": ["rich", "warm"]
+    },
+    "shortDescription": "A printed silk scarf to elevate any outfit.",
+    "longDescription": "A lightweight silk square scarf that can be worn around the neck, tied to a bag handle, or used as a hair accessory — an easy way to add color and polish to a simple outfit.",
+    "image": "/images/products/p029-silk-scarf.jpg"
+  },
+  {
+    "id": "P030",
+    "name": "Statement Gold Hoop Earrings",
+    "category": "Accessories",
+    "subcategory": "Jewelry",
+    "price": 34,
+    "sizes": ["One Size"],
+    "colors": ["Gold"],
+    "material": "Gold-plated brass",
+    "tags": {
+      "occasion": ["party", "date night", "night out", "everyday"],
+      "style": ["statement", "glam", "versatile"],
+      "season": ["all season"],
+      "fit": ["one size"],
+      "colorMood": ["warm", "bold"]
+    },
+    "shortDescription": "Bold gold hoop earrings that dress up any look.",
+    "longDescription": "Lightweight despite their bold scale, these gold-plated hoops add instant polish to jeans-and-tee outfits or evening looks alike.",
+    "image": "/images/products/p030-gold-hoop-earrings.jpg"
+  }
+]
