@@ -73,7 +73,11 @@ export default function ProductDetail() {
           <button
             onClick={handleAddToCart}
             disabled={!size}
-            className="mt-8 w-full rounded-full bg-ink px-8 py-3 text-sm font-medium uppercase tracking-wide text-white transition-opacity disabled:cursor-not-allowed disabled:opacity-40 sm:w-auto"
+            // Capped width (not full-bleed) on mobile only, so this button's
+            // right edge never sits under the floating chat FAB regardless
+            // of scroll position — sm:w-auto makes the cap a no-op on
+            // desktop, where the button already isn't full width.
+            className="mt-8 w-[calc(100%-4rem)] rounded-full bg-ink px-8 py-3 text-sm font-medium uppercase tracking-wide text-white transition-opacity disabled:cursor-not-allowed disabled:opacity-40 sm:w-auto"
           >
             {added ? 'Added ✓' : size ? 'Add to Cart' : 'Select a size'}
           </button>

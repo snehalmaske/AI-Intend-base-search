@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import ProductCard from './ProductCard.jsx';
-import { postSearch } from '../utils/api.js';
+import { useAiChat } from '../hooks/useAiChat.js';
 
 const STARTER_PROMPTS = [
   'Something for a beach wedding, under $100',
@@ -17,10 +17,8 @@ const WELCOME = {
 };
 
 export default function AISearchChat() {
-  const [messages, setMessages] = useState([WELCOME]);
+  const { messages, loading, error, sendMessage } = useAiChat(WELCOME);
   const [input, setInput] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
   const scrollRef = useRef(null);
   const messageRefs = useRef([]);
 
@@ -41,48 +39,20 @@ export default function AISearchChat() {
     });
   }
 
-  async function sendMessage(text) {
-    const trimmed = text.trim();
-    if (!trimmed || loading) return;
-
-    const userMessage = { role: 'user', content: trimmed };
-    const nextMessages = [...messages, userMessage];
-    setMessages(nextMessages);
+  async function handleSend(text) {
     setInput('');
-    setError(null);
-    setLoading(true);
     scrollToBottom();
-
-    // Only role/content is sent as conversational history — the AI reads
-    // this to resolve refinements like "show me something cheaper".
-    const history = messages
-      .filter((m) => m !== WELCOME)
-      .map((m) => ({ role: m.role, content: m.content }));
-
-    try {
-      const result = await postSearch({ message: trimmed, history });
-      const updated = [
-        ...nextMessages,
-        {
-          role: 'assistant',
-          content: result.message,
-          products: result.products,
-          isClarifyingQuestion: result.isClarifyingQuestion,
-        },
-      ];
-      setMessages(updated);
-      setLoading(false);
-      scrollMessageToTop(updated.length - 1);
-    } catch (err) {
-      setError(err.message);
-      setLoading(false);
+    const idx = await sendMessage(text);
+    if (idx != null) {
+      scrollMessageToTop(idx);
+    } else {
       scrollToBottom();
     }
   }
 
   function handleSubmit(e) {
     e.preventDefault();
-    sendMessage(input);
+    handleSend(input);
   }
 
   return (
@@ -135,7 +105,7 @@ export default function AISearchChat() {
           {STARTER_PROMPTS.map((prompt) => (
             <button
               key={prompt}
-              onClick={() => sendMessage(prompt)}
+              onClick={() => handleSend(prompt)}
               className="rounded-full border border-blush px-3 py-1.5 text-xs text-ink/70 hover:border-ink hover:text-ink"
             >
               {prompt}
