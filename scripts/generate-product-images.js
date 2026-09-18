@@ -130,9 +130,14 @@ async function main() {
     const filename = filenameFor(product);
     const outputPath = path.join(OUTPUT_DIR, filename);
     const svgPath = placeholderPathFor(outputPath);
+    const hasRealImage = fs.existsSync(outputPath);
+    const hasPlaceholder = fs.existsSync(svgPath);
 
-    if (fs.existsSync(outputPath) || fs.existsSync(svgPath)) {
-      console.log(`skip   ${filename} (already exists)`);
+    // A real photo is done — never touch it. A placeholder only counts as
+    // "done" if we still have no key to upgrade it with; otherwise this run
+    // should replace it with a real photo.
+    if (hasRealImage || (hasPlaceholder && !hasOpenAI && !hasStability)) {
+      console.log(`skip   ${filename} (${hasRealImage ? 'real image' : 'placeholder'} already exists)`);
       skipped++;
       continue;
     }
@@ -143,10 +148,12 @@ async function main() {
       if (hasOpenAI) {
         console.log(`gen    ${filename} (OpenAI gpt-image-1)`);
         fs.writeFileSync(outputPath, await generateWithOpenAI(prompt));
+        if (hasPlaceholder) fs.unlinkSync(svgPath);
         generated++;
       } else if (hasStability) {
         console.log(`gen    ${filename} (Stability AI)`);
         fs.writeFileSync(outputPath, await generateWithStability(prompt));
+        if (hasPlaceholder) fs.unlinkSync(svgPath);
         generated++;
       } else {
         writePlaceholder(outputPath, product);
@@ -155,7 +162,7 @@ async function main() {
       }
     } catch (err) {
       console.error(`FAILED ${filename}: ${err.message}`);
-      writePlaceholder(outputPath, product);
+      if (!hasPlaceholder) writePlaceholder(outputPath, product);
       placeholders++;
     }
   }

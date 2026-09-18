@@ -2,6 +2,7 @@
   "name": "ai-intent-based-search",
   "private": true,
   "version": "1.0.0",
+  "type": "module",
   "description": "Women's clothing e-commerce storefront with an AI-powered intent-based product discovery agent",
   "workspaces": [
     "client",
