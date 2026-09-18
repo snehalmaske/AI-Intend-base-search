@@ -3,7 +3,12 @@ services:
     name: maison-vireo
     runtime: node
     plan: free
-    buildCommand: npm install && npm run build
+    # rm -rf node_modules first: Render caches node_modules between builds,
+    # and a build that failed partway through optional-dependency install
+    # (see npm/cli#4828) can leave a broken cache that a plain `npm install`
+    # won't detect or repair on the next build. Forcing a clean install
+    # trades a few seconds of build time for not silently reusing that.
+    buildCommand: rm -rf node_modules client/node_modules server/node_modules && npm install && npm run build
     startCommand: npm start
     envVars:
       - key: ANTHROPIC_API_KEY
