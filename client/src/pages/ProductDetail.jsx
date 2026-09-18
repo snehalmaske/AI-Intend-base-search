@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import SizeSelector from '../components/SizeSelector.jsx';
+import AISearchChat from '../components/AISearchChat.jsx';
 import { resolveProductImage } from '../utils/resolveProductImage.js';
 import { fetchProduct } from '../utils/api.js';
 import { useCart } from '../context/CartContext.jsx';
@@ -76,6 +77,17 @@ export default function ProductDetail() {
           >
             {added ? 'Added ✓' : size ? 'Add to Cart' : 'Select a size'}
           </button>
+        </div>
+      </div>
+
+      <div className="mt-16 border-t border-blush pt-10">
+        <h2 className="font-display text-2xl text-ink">Ask Aria</h2>
+        <p className="mt-2 text-sm text-ink/60">
+          Not sure this is the one? Tell Aria what you're looking for and she'll suggest other
+          pieces from the collection.
+        </p>
+        <div className="mt-6">
+          <AISearchChat />
         </div>
       </div>
     </div>

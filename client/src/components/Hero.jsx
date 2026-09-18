@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section className="bg-gradient-to-b from-blush/60 to-cream px-4 py-16 text-center sm:py-24">
       <p className="text-xs font-medium uppercase tracking-[0.2em] text-clay">
-        AI-powered personal shopping
+        Ask Aria, your personal AI assistant
       </p>
       <h1 className="mx-auto mt-4 max-w-2xl font-display text-4xl leading-tight text-ink sm:text-5xl">
         Tell us what you need. We'll find the fit.

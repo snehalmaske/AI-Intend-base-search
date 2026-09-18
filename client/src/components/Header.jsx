@@ -2,10 +2,7 @@ import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { useCart } from '../context/CartContext.jsx';
 
-const navLinks = [
-  { to: '/shop', label: 'Shop' },
-  { to: '/search', label: 'Ask Aria ✨' },
-];
+const navLinks = [{ to: '/shop', label: 'Shop' }];
 
 export default function Header() {
   const { totalItems } = useCart();
@@ -14,8 +11,8 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-blush bg-cream/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
-        <Link to="/" className="font-display text-2xl tracking-wide text-ink">
-          Aria
+        <Link to="/" className="whitespace-nowrap font-display text-xl tracking-wide text-ink sm:text-2xl">
+          Maison Vireo
         </Link>
 
         <nav className="hidden items-center gap-8 sm:flex">
