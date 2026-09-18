@@ -3,12 +3,12 @@ services:
     name: maison-vireo
     runtime: node
     plan: free
-    # rm -rf node_modules first: Render caches node_modules between builds,
-    # and a build that failed partway through optional-dependency install
-    # (see npm/cli#4828) can leave a broken cache that a plain `npm install`
-    # won't detect or repair on the next build. Forcing a clean install
-    # trades a few seconds of build time for not silently reusing that.
-    buildCommand: rm -rf node_modules client/node_modules server/node_modules && npm install && npm run build
+    # Clears npm's package cache (not just node_modules) and reinstalls
+    # from scratch on every build. Works around npm/cli#4828 — an npm bug
+    # around optional platform-specific native dependencies (here, Vite's
+    # rolldown binding) that a plain `npm install`, or even a node_modules
+    # wipe alone, doesn't reliably self-heal from once triggered.
+    buildCommand: npm cache clean --force && rm -rf node_modules client/node_modules server/node_modules && npm install && npm run build
     startCommand: npm start
     envVars:
       - key: ANTHROPIC_API_KEY
@@ -16,4 +16,7 @@ services:
       - key: CLAUDE_MODEL
         value: claude-sonnet-4-6
       - key: NODE_VERSION
-        value: 20.18.0
+        # Matches the Node/npm version this was verified working against
+        # locally (npm 10.9.7). Render's default 20.18.0 bundles an older
+        # npm that appears to hit npm/cli#4828 more readily.
+        value: 22.22.2
