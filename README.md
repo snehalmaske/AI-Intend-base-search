@@ -1,4 +1,4 @@
-# Aria — Women's Fashion, Found by Description
+# Maison Vireo — Women's Fashion, Found by Description
 
 A women's clothing e-commerce storefront with an AI-powered, intent-based product
 discovery agent. Instead of clicking filters, customers describe what they want
@@ -137,9 +137,36 @@ stated reason for that pick.
 
 ```bash
 npm run build          # production build of the client
-npm run dev:server     # run only the API
+npm start              # run the production server (serves the built client + API on one port)
+npm run dev:server     # run only the API, in dev mode
 npm run dev:client     # run only the Vite dev server
 ```
+
+## Deploying (Render)
+
+In production, `server/src/index.js` also serves the built client
+(`client/dist`) directly — one process, one URL, no separate frontend host or
+CORS setup needed. `render.yaml` at the repo root configures this for
+[Render](https://render.com)'s free tier:
+
+1. Push this repo to GitHub (already done if you're reading this from there).
+2. On [render.com](https://render.com), click **New +** → **Blueprint**, and
+   connect this repository. Render reads `render.yaml` automatically.
+3. When prompted, paste your `ANTHROPIC_API_KEY` — it's the only secret you
+   need to supply; everything else in `render.yaml` is preconfigured.
+4. Deploy. Render runs `npm install && npm run build` then `npm start`, and
+   gives you a public URL (e.g. `https://maison-vireo.onrender.com`).
+
+Notes:
+- The free tier spins the service down after ~15 minutes idle, so the first
+  request after a quiet period takes ~30-50s to wake up.
+- Product images: `npm run generate-images` is a local dev-time script.
+  If you want real photos live on the deployed site, run it locally first
+  and commit the generated files in `client/src/assets/products/` before
+  pushing — the build step bundles whatever's already committed there.
+- `CLAUDE_MODEL` is already set in `render.yaml`. `PORT` doesn't need to be
+  set at all — Render injects it automatically and the server already reads
+  `process.env.PORT`.
 
 ## Extending the catalog
 
