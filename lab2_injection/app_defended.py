@@ -4,7 +4,11 @@ import sqlite3, ast
 app = Flask(__name__)
 
 def get_db():
-    conn = sqlite3.connect("lab2.db")
+    # Least-privilege: the app only reads, so open the DB read-only (mode=ro).
+    # SQLite has no user accounts, so least privilege is enforced at the
+    # connection level — any INSERT/UPDATE/DELETE/DROP through this connection
+    # fails with "attempt to write a readonly database".
+    conn = sqlite3.connect("file:lab2.db?mode=ro", uri=True)
     conn.row_factory = sqlite3.Row
     return conn
 
