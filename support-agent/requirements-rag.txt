@@ -1,0 +1,4 @@
+# Vector store + embeddings. Without these the app falls back to a TF-IDF
+# retriever persisted in SQLite (same interface, same filters).
+chromadb>=0.5
+sentence-transformers>=2.7

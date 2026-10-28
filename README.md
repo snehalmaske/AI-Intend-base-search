@@ -1,5 +1,11 @@
 # Maison Vireo — Women's Fashion, Found by Description
 
+> **Also in this repo:** [`support-agent/`](support-agent/README.md) — Enterprise
+> Customer Support Agent (refunds), a multi-agent FastAPI + LangGraph app with
+> code-enforced policy guardrails and an append-only audit log, built as the
+> target system for an AI-governance red/blue-team exercise. It is self-contained
+> (Python) and independent of the storefront below.
+
 A women's clothing e-commerce storefront with an AI-powered, intent-based product
 discovery agent. Instead of clicking filters, customers describe what they want
 in plain language ("something for a beach wedding, under $100") and an AI

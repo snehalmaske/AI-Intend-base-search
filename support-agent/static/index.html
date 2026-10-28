@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support Agent Console</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <strong>Enterprise Customer Support Agent</strong>
+      <span class="muted">synthetic data · governance lab</span>
+    </div>
+    <div class="status" id="status-pills"></div>
+  </header>
+  <div id="banner" class="banner hidden"></div>
+
+  <nav class="tabs" id="tabs">
+    <button data-tab="queue" class="active">Case Queue</button>
+    <button data-tab="newcase">New Case</button>
+    <button data-tab="customers">Customers</button>
+    <button data-tab="reporting">Reporting</button>
+    <button data-tab="evidence">Evidence (Audit)</button>
+    <button data-tab="policies">Admin / Policies</button>
+    <button data-tab="controls">Controls</button>
+  </nav>
+
+  <main>
+    <!-- Case queue -->
+    <section id="tab-queue" class="tab active">
+      <div class="split">
+        <div class="panel list-panel">
+          <div class="row between">
+            <h2>Cases</h2>
+            <select id="queue-filter">
+              <option value="">all statuses</option>
+              <option>new</option><option>assigned</option><option>validated</option>
+              <option>acknowledged</option><option>supervisor_review</option><option>approved</option>
+              <option>approved_by_supervisor</option><option>denied</option>
+              <option>denied_by_supervisor</option><option>processed</option>
+            </select>
+          </div>
+          <table class="table clickable" id="case-table">
+            <thead><tr><th>#</th><th>Customer</th><th class="num">Amount</th><th>Status</th><th>Next</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="panel detail-panel" id="case-detail">
+          <p class="muted">Select a case to step through the workflow.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- New case -->
+    <section id="tab-newcase" class="tab">
+      <div class="panel narrow">
+        <h2>Submit a refund request</h2>
+        <p class="muted">Submitted as the selected customer. The Intake Agent validates and creates the case.</p>
+        <form id="newcase-form" class="form">
+          <label>Customer <select name="customer_id" id="newcase-customer" required></select></label>
+          <label>Amount requested ($) <input name="amount_requested" type="number" step="0.01" min="0.01" required></label>
+          <label>Reason / description <textarea name="description" rows="5" maxlength="4000" required></textarea></label>
+          <button type="submit" class="primary">Submit case</button>
+        </form>
+        <pre id="newcase-result" class="result hidden"></pre>
+      </div>
+    </section>
+
+    <!-- Customers -->
+    <section id="tab-customers" class="tab">
+      <div class="panel">
+        <h2>Customers</h2>
+        <p class="muted">Operator view. Bank accounts are always masked; agents never see this list.</p>
+        <table class="table" id="customer-table">
+          <thead><tr><th>#</th><th>Name</th><th>Email</th><th>Bank account</th><th class="num">Balance</th><th class="num">7-day approved</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Reporting -->
+    <section id="tab-reporting" class="tab">
+      <div class="tiles" id="report-tiles"></div>
+      <div class="split even">
+        <div class="panel">
+          <h2>Per-customer rolling 7-day totals</h2>
+          <table class="table" id="weekly-table">
+            <thead><tr><th>Customer</th><th class="num">7-day total</th><th>Usage of cap</th><th class="num">Headroom</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="panel">
+          <h2>Denial reasons</h2>
+          <table class="table" id="reasons-table"><thead><tr><th>Category</th><th class="num">Count</th></tr></thead><tbody></tbody></table>
+        </div>
+      </div>
+      <div class="panel">
+        <h2>Reporting Agent entries</h2>
+        <table class="table" id="entries-table">
+          <thead><tr><th>Case</th><th>Customer</th><th>Outcome</th><th class="num">Amount</th><th>Reason</th><th>When</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Evidence -->
+    <section id="tab-evidence" class="tab">
+      <div class="panel">
+        <div class="row between wrap">
+          <h2>Audit log</h2>
+          <div class="row gap wrap">
+            <span id="chain-status" class="pill"></span>
+            <a class="button" id="export-csv" href="/api/audit/export?format=csv">Export CSV</a>
+            <a class="button" id="export-json" href="/api/audit/export?format=json">Export JSON</a>
+          </div>
+        </div>
+        <form id="audit-filter" class="row gap wrap filters">
+          <input name="q" placeholder="search reason / inputs / result">
+          <select name="actor"><option value="">any actor</option></select>
+          <select name="decision"><option value="">any decision</option><option>allow</option><option>deny</option><option>escalate</option><option>error</option></select>
+          <input name="rule" placeholder="rule (e.g. revocation)">
+          <input name="target" placeholder="target (e.g. case:6)">
+          <button type="submit">Filter</button>
+        </form>
+        <div class="table-wrap">
+          <table class="table" id="audit-table">
+            <thead><tr><th>#</th><th>Time (UTC)</th><th>Actor</th><th>Action</th><th>Target</th><th>Decision</th><th>Rule</th><th>Reason</th><th>Policy refs</th><th>Revocation</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Policies -->
+    <section id="tab-policies" class="tab">
+      <div class="split even">
+        <div class="panel">
+          <h2>Upload policy</h2>
+          <form id="policy-form" class="form">
+            <label>Name <input name="name" value="refund_policy.md" required></label>
+            <label>File <input type="file" id="policy-file" accept=".md,.txt"></label>
+            <label>Content (markdown; sections tagged RP-x.y become citable chunks)
+              <textarea name="content" rows="12" required></textarea></label>
+            <button type="submit" class="primary">Upload &amp; index</button>
+          </form>
+          <pre id="policy-result" class="result hidden"></pre>
+          <h2>Retrieve</h2>
+          <form id="policy-search" class="row gap"><input name="q" placeholder="e.g. weekly limit" required><button>Search</button></form>
+          <div id="policy-search-results"></div>
+        </div>
+        <div class="panel">
+          <h2>Indexed chunks</h2>
+          <div id="policy-chunks"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Controls -->
+    <section id="tab-controls" class="tab">
+      <div class="panel narrow">
+        <h2>Kill switch</h2>
+        <p>Revoking authority makes the policy engine refuse every consequential action (send email,
+          write records, decide, process refund, update balance) at the moment of action, including
+          workflows already in flight. Read-only actions continue.</p>
+        <div class="killswitch">
+          <div id="kill-state" class="kill-state"></div>
+          <input id="kill-reason" placeholder="reason (recorded in audit log)">
+          <button id="kill-toggle" class="danger"></button>
+        </div>
+      </div>
+      <div class="panel narrow">
+        <h2>Guardrails</h2>
+        <p class="muted">Read-only. Toggled only through environment variables for controlled lab exercises.</p>
+        <table class="table" id="guardrail-table"><thead><tr><th>Guardrail</th><th>Policy section</th><th>State</th></tr></thead><tbody></tbody></table>
+      </div>
+      <div class="panel narrow">
+        <h2>Least-privilege map</h2>
+        <table class="table" id="grants-table"><thead><tr><th>Principal</th><th>Tools</th></tr></thead><tbody></tbody></table>
+      </div>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
